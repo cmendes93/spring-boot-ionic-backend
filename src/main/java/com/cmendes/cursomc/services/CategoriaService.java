@@ -60,10 +60,10 @@ public class CategoriaService {
 	}
 
 	public Categoria fromDTO(CategoriaDTO objDto) {
-		return new Categoria(objDto.getId(), objDto.getName());
+		return new Categoria(objDto.getId(), objDto.getNome());
 	}
 	
 	private void updateData(Categoria newObj, Categoria obj) {
-		newObj.setName(obj.getName());
+		newObj.setNome(obj.getNome());
 	}
 }

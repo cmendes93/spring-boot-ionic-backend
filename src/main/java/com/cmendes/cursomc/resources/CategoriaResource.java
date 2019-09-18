@@ -34,7 +34,7 @@ public class CategoriaResource {
 		Categoria obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 	}
-	
+	                                                                                                                                                                                                         
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@Valid @RequestBody CategoriaDTO objDto ){
 		Categoria obj = service.fromDTO(objDto);
@@ -68,7 +68,7 @@ public class CategoriaResource {
 	public ResponseEntity<?> findAll(
 			@RequestParam(value="page", defaultValue="0") Integer page, 
 			@RequestParam(value="linesPerPage", defaultValue="24") Integer linesPerPage, 
-			@RequestParam(value="orderBy", defaultValue="name") String orderBy, 
+			@RequestParam(value="orderBy", defaultValue="nome") String orderBy, 
 			@RequestParam(value="direction", defaultValue="ASC") String direction){
 		
 		Page<Categoria> list = service.findPage(page, linesPerPage, orderBy, direction);
